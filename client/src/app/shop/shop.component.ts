@@ -22,7 +22,7 @@ export class ShopComponent implements OnInit {
     {name: "Price: Low to high", value: "priceAsc"},
     {name: "Price: High to low", value: "priceDesc"}
   ];
-  totalCount = 0;
+  totalCount = 100;
 
   constructor(private shopService: ShopService) {
     
@@ -85,6 +85,7 @@ export class ShopComponent implements OnInit {
 
   onSearch() {
     this.shopParams.search = this.searchTerm?.nativeElement.value;
+    
     this.getProducts();
   }
 

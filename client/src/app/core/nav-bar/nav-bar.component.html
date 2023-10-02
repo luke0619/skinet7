@@ -1,9 +1,13 @@
 <header class="d-flex flex-row align-items-center justify-content-between p-3 px-4 mb-3 border-bottom bg-white border-bottom fixed-top shadow-sm">
-    <img src="/assets/images/logo.png" alt="logo" style="max-height: 70px;">
+    <img src="/assets/images/logo.png" alt="logo" class="logo" style="max-height: 70px;" routerLink="/">
       <nav class="my-2 text-uppercase fs-4">
-        <a class="p-2 text-dark text-decoration-none" href="#">首頁</a>
-        <a class="p-2 text-dark text-decoration-none" href="#">商城</a>
-        <a class="p-2 text-dark text-decoration-none" href="#">聯絡我們</a>
+        <a class="p-2" 
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}"
+            >首頁</a>
+        <a class="p-2" routerLink="/shop" routerLinkActive="active">商城</a>
+        <a class="p-2" routerLink="/contact" routerLinkActive="active">聯絡我們</a>
       </nav>
       <div class="d-flex align-items-center">
         <a class="position-relative">
